@@ -1,1 +1,1 @@
-cat benchmarks.txt
+cat benchmarks.txt | sed -E 's/\t0/\t /g'

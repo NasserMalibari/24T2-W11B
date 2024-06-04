@@ -1,1 +1,1 @@
-cat benchmarks.txt
+cat benchmarks.txt | sed -E '/^program2\t/,/^program13/d'
