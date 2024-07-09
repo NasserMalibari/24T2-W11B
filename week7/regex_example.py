@@ -1,7 +1,7 @@
 import re
 
 # re.search
-match_obj = re.search('[hH]+', "hhHello world")
+match_obj = re.search(r'[hH]+', "hhHello world")
 
 # get indexes of original string where match occured
 # >> (0,3)
@@ -19,7 +19,7 @@ print(match_obj.string)
 # re.findall()
 
 # find all sequences of capital letters
-all_matches = re.findall("[A-Z]+", "AAABBC some ZZZ capitals123 BCD")
+all_matches = re.findall(r"[A-Z]+", "AAABBC some ZZZ capitals123 BCD")
 
 # print(len(all_matches))
 # >> 3
@@ -27,6 +27,12 @@ all_matches = re.findall("[A-Z]+", "AAABBC some ZZZ capitals123 BCD")
 print(all_matches)
 # >> ['AAABBC', 'ZZZ', 'BCD']
 
+# re.sub
+
+# replace all sequnces of numbers with a '?'
+new_string = re.sub(r"[0-9]+", '?', "i have 123 sets of 10")
+print(new_string)
+# >> 'i have ? sets of ?'
 
 
 #####
