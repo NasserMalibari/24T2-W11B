@@ -16,6 +16,11 @@ print(match_obj.group(0))
 print(match_obj.string)
 
 
+# alternatively use flags
+match_obj = re.search(r'h+', "hhHello world", flags=re.I)
+
+
+
 # re.findall()
 
 # find all sequences of capital letters
